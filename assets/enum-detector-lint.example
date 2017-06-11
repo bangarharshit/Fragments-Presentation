@@ -1,0 +1,38 @@
+public class EnumDetector extends Detector
+                            implements Detector.JavaScanner {
+
+    // Implementation and issues from previous slides
+
+    @Override
+    public boolean appliesTo(@NonNull Context context, @NonNull File file) {
+        return true;
+    }
+
+    @Override
+    public EnumSet<Scope> getApplicableFiles() {
+        return Scope.JAVA_FILE_SCOPE;
+    }
+
+    @Override
+    public List<Class<? extends Node>> getApplicableNodeTypes() {
+        return Arrays.<Class<? extends Node>>asList(
+                EnumDeclaration.class
+        );
+    }
+
+    @Override
+    public AstVisitor createJavaVisitor(@NonNull JavaContext context) {
+        return new EnumChecker(context);
+    }
+
+    private static class EnumChecker extends ForwardingAstVisitor {
+
+        // Initialization
+
+        @Override
+        public boolean visitEnumDeclaration(EnumDeclaration node) {
+            mContext.report(ISSUE, Location.create(mContext.file), ISSUE.getBriefDescription(TextFormat.TEXT));
+            return super.visitEnumDeclaration(node);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+public void validateMyModel(SimpleModel myModel) {
+    try {
+        Rave.getInstance().validate(object);
+    } catch (UnsupportedObjectException e) {
+        // handle unsupported error case.
+        Timber.e(e)
+    } catch (RaveException e) {
+        // handle rave validation error.
+        Timber.e(e)
+    }
+}

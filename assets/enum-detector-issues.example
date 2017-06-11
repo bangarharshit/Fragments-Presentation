@@ -1,0 +1,16 @@
+private static final String ISSUE_ID = "Enum";
+private static final String ISSUE_DESCRIPTION = "Avoid Using Enums";
+private static final String ISSUE_EXPLANATION = "No enums";
+private static final Category ISSUE_CATEGORY = Category.PERFORMANCE;
+private static final int ISSUE_PRIORITY = 5;
+private static final Severity ISSUE_SEVERITY = Severity.WARNING;
+
+public static final Issue ISSUE = Issue.create(
+        ISSUE_ID,
+        ISSUE_DESCRIPTION,
+        ISSUE_EXPLANATION,
+        ISSUE_CATEGORY,
+        ISSUE_PRIORITY,
+        ISSUE_SEVERITY,
+        IMPLEMENTATION //Implementation from previous slide.
+);

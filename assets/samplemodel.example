@@ -1,0 +1,32 @@
+@Validated(factory = SampleFactory.class)
+public class SampleModel {
+
+  private String notNullField;
+  private String canBeNullField;
+  private List<String> names = new ArrayList<>();
+
+  private static final String MATCHED = "Matched";
+  private static final String MATCHING = "Matching";
+  private static final String NOT_MATCHED = "NotMatched";
+
+  @StringDef({MATCHED, MATCHING, NOT_MATCHED})
+  @Retention(RetentionPolicy.SOURCE)
+  @interface StringVals { }
+
+  public SampleModel() {}
+
+  @StringVals
+  public String getNotNullField() {
+    return notNullField;
+  }
+
+  @Size(5)
+  public List<String> getNames() {
+    return names;
+  }
+
+  @MustBeFalse
+  public boolean getIsFalse() {
+    return names.size() > 2 && canBeNullField != null;
+  }
+}

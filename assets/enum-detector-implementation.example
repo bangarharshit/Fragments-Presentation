@@ -1,0 +1,7 @@
+private static final Class<? extends Detector> DETECTOR_CLASS = EnumDetector.class;
+private static final EnumSet<Scope> DETECTOR_SCOPE = Scope.JAVA_FILE_SCOPE;
+
+private static final Implementation IMPLEMENTATION = new Implementation(
+        DETECTOR_CLASS,
+        DETECTOR_SCOPE
+);
