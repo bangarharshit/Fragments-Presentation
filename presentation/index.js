@@ -62,7 +62,7 @@ export default class Presentation extends React.Component {
               <Slide transition={["fade"]}>
                 <ImageSlide
                     title="Null Pointer Exception"
-                    image="https://cdn.meme.am/cache/instances/folder258/52195258.jpg"
+                    image="assets/npe.jpg"
                 />
               </Slide>
               <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -78,7 +78,7 @@ export default class Presentation extends React.Component {
               <Slide transition={["fade"]}>
                 <ImageSlide
                     title="Life of an Android Developer"
-                    image="http://res.cloudinary.com/nonety/image/upload/v1497188760/mamute_-_Page_1_4_ngkme3.png"
+                    image="assets/android_developer_unhappy_life.png"
                 />
               </Slide>
               <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -88,11 +88,6 @@ export default class Presentation extends React.Component {
                   <Appear><ListItem>Lint</ListItem></Appear>
                   <Appear><ListItem>Rave</ListItem></Appear>
                 </List>
-              </Slide>
-              <Slide transition={["fade"]} bgColor="primary">
-                <Heading size={2} fit caps lineHeight={1} textColor="secondary">
-                  Annotations
-                </Heading>
               </Slide>
               <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
                 <Heading size={6} textColor="secondary" caps>Annotations</Heading>
@@ -168,7 +163,7 @@ export default class Presentation extends React.Component {
               <Slide transition={["fade"]}>
                 <ImageSlide
                     title="The power of Lint"
-                    image="https://developer.android.com/studio/images/write/lint.png"
+                    image="assets/lint.png"
                 />
               </Slide>
               <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -224,7 +219,7 @@ export default class Presentation extends React.Component {
               <Slide transition={["fade"]}>
                 <ImageSlide
                     title="The power of custom lints"
-                    image="https://www.bignerdranch.com/assets/img/blog/2016/02/diagram-architecture.png"
+                    image="assets/custom_lint.png"
                 />
               </Slide>
               <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
@@ -269,7 +264,7 @@ export default class Presentation extends React.Component {
               <Slide transition={["fade"]}>
                 <ImageSlide
                     title="Life of an android developer"
-                    image="http://res.cloudinary.com/nonety/image/upload/v1497189765/mamute_-_Page_1_5_xnqiur.png"
+                    image="assets/android_developer_half_happy_life.png"
                 />
               </Slide>
               <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
@@ -335,9 +330,10 @@ export default class Presentation extends React.Component {
               <Slide transition={["fade"]}>
                 <ImageSlide
                     title="Life of an android developer"
-                    image="http://res.cloudinary.com/nonety/image/upload/v1497183912/mamute_-_Page_1_1_ksnyrb.png"
+                    image="assets/android_developer_happy_life.png"
                 />
               </Slide>
+
               <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
                 <Heading size={6} textColor="secondary" caps>Summary</Heading>
                 <List>
